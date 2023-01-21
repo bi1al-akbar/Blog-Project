@@ -1,0 +1,9 @@
+<%- include ("./partials/header", {title : "Home page"}) -%>
+<h1>Home</h1>
+<p><%=homeDetail%></p>
+<%   for (let i = 0; i< posts.length;i++){%>
+<hr>
+<h3 style="font-weight: 700;"><%= posts[i].title %> </h3>
+<p><%= posts[i].description.substring(0,70)+"..." %> <a href="/posts/<%=posts[i].title%> ">Read more</a></p>
+<% }%>
+<%- include ("./partials/footer") -%>
