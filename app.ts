@@ -122,7 +122,7 @@ app.post("/", (req: any, res: any) => {
 });
 
 app.post("/posts", async (req: any, res: any) => {
-    console.log(_.lowerCase(req.body.deleteButton));
+	console.log(_.lowerCase(req.body.deleteButton));
 	try {
 		const query = await Article.findOneAndUpdate(
 			{ page: "home" },
